@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V1 × V2 — Dra. Jessica Moreira</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#15181C;color:#E8E6E1;font:14px/1.5 "Jost",system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
+  header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:12px 20px;border-bottom:1px solid #2C3138}
+  h1{margin:0;font-size:15px;font-weight:500;letter-spacing:.04em}
+  .grupo{display:flex;align-items:center;gap:8px;margin-left:auto}
+  button{background:#22262B;color:#E8E6E1;border:1px solid #363C44;border-radius:999px;padding:7px 15px;font:inherit;font-size:13px;cursor:pointer}
+  button:hover{border-color:#C97B86}
+  button[aria-pressed="true"]{background:#C97B86;border-color:#C97B86;color:#15181C}
+  main{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2C3138;min-height:0}
+  section{display:flex;flex-direction:column;min-width:0;background:#15181C}
+  h2{margin:0;padding:9px 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9AA1A9;font-weight:400}
+  .palco{flex:1;display:flex;justify-content:center;overflow:auto;padding:0 0 18px;min-height:0}
+  iframe{border:0;background:#fff;flex:none;height:100%}
+  .nota{padding:8px 20px;font-size:12px;color:#7D858E;border-top:1px solid #2C3138}
+  @media(max-width:900px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dra. Jessica Moreira — V1 × V2</h1>
+  <div class="grupo">
+    <span style="color:#7D858E;font-size:12px">Largura:</span>
+    <button data-w="390">390 · celular</button>
+    <button data-w="768">768 · tablet</button>
+    <button data-w="1280" aria-pressed="true">1280 · desktop</button>
+    <button data-w="0">total</button>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>V1 — versão atual (intacta)</h2>
+    <div class="palco"><iframe id="v1" src="index.html" title="V1"></iframe></div>
+  </section>
+  <section>
+    <h2>V2 — evolução editorial</h2>
+    <div class="palco"><iframe id="v2" src="v2/index.html" title="V2"></iframe></div>
+  </section>
+</main>
+
+<p class="nota">
+  Os dois são independentes: a V1 usa <code>index.html</code> + <code>assets/</code>; a V2 usa
+  <code>v2/index.html</code> + <code>v2/assets/</code>. Nenhum arquivo é compartilhado.
+</p>
+
+<script>
+  const quadros = [document.getElementById("v1"), document.getElementById("v2")];
+  const botoes = document.querySelectorAll("button[data-w]");
+
+  function aplicar(largura) {
+    quadros.forEach(f => {
+      f.style.width = largura ? largura + "px" : "100%";
+    });
+    botoes.forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.w === largura)));
+  }
+
+  botoes.forEach(b => b.addEventListener("click", () => aplicar(+b.dataset.w)));
+  aplicar(1280);
+</script>
+</body>
+</html>

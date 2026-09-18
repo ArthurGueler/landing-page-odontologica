@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Jessica Moreira — Cirurgiã-Dentista em Jacaraípe, Serra ES</title>
+<meta name="description" content="Consultório odontológico da Dra. Jessica Moreira, CRO 8271 ES. Cirurgia, estética dental, próteses, implantes e tratamento de dor na Av. Minas Gerais, 1026 — Jacaraípe, Serra/ES. Atendimento inclusive aos domingos.">
+<meta name="theme-color" content="#2E363E">
+<link rel="canonical" href="https://SEUDOMINIO.com.br/"><!-- EDITAR: domínio final -->
+
+<!-- Open Graph: preview ao compartilhar no WhatsApp/Instagram -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Dra. Jessica Moreira — Cirurgiã-Dentista em Jacaraípe, Serra ES">
+<meta property="og:description" content="Cirurgia, estética dental, próteses, implantes e tratamento de dor. Agende sua avaliação pelo WhatsApp.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   PALETA — extraída da logo da Dra. Jessica (rosa + grafite)
+   ============================================================ */
+:root{
+  --fundo:      #FDF8F7;
+  --fundo-alt:  #F6EAE9;
+  --rosa:       #E794A4;
+  --rosa-forte: #B4566C;
+  --grafite:    #2E363E;
+  --grafite-mid:#48525C;
+  --tinta:      #23282D;
+  --tinta-suave:#5C636A;
+
+  --display: "Fraunces", Georgia, serif;
+  --corpo:   "Jost", -apple-system, "Segoe UI", sans-serif;
+
+  --max: 1180px;
+  --gut: clamp(20px, 5vw, 64px);
+  --r:   4px;
+
+  --sombra: 0 26px 62px -34px rgba(46,54,62,.45);
+  --ease: cubic-bezier(.22,.68,0,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--fundo);color:var(--tinta);
+  font-family:var(--corpo);font-size:17px;font-weight:300;line-height:1.65;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin:0}
+p{margin:0}
+::selection{background:var(--rosa);color:#fff}
+:focus-visible{outline:2px solid var(--rosa-forte);outline-offset:4px;border-radius:2px}
+
+/* Grão sutil — fica ATRÁS do conteúdo para não lavar textos e botões */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.26;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+
+/* Reveal no scroll */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv,.an{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.topo{
+  position:fixed;inset:0 0 auto;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:16px var(--gut);
+  transition:padding .4s var(--ease),background .4s var(--ease),box-shadow .4s var(--ease);
+}
+.topo.encolhe{
+  padding:8px var(--gut);
+  background:rgba(253,248,247,.9);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 rgba(46,54,62,.1);
+}
+.logo{display:block;height:52px;width:auto;transition:height .4s var(--ease)}
+.topo.encolhe .logo{height:42px}
+@media(max-width:560px){.logo{height:38px}.topo.encolhe .logo{height:33px}}
+.topo-nav{display:flex;align-items:center;gap:28px}
+.topo-nav a:not(.btn){font-size:14px;letter-spacing:.04em;text-decoration:none;color:var(--tinta-suave);transition:color .3s}
+.topo-nav a:not(.btn):hover{color:var(--rosa-forte)}
+@media(max-width:860px){.topo-nav a:not(.btn){display:none}}
+
+/* ============================================================
+   BOTOES
+   ============================================================ */
+.btn{
+  --bg:var(--grafite);--fg:#fff;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 28px;border-radius:999px;
+  background:var(--bg);color:var(--fg);
+  font-family:var(--corpo);font-size:15px;font-weight:500;letter-spacing:.02em;
+  text-decoration:none;border:1px solid transparent;
+  position:relative;overflow:hidden;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),color .35s var(--ease);
+}
+.btn::before{content:"";position:absolute;inset:0;background:var(--rosa-forte);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(46,54,62,.5)}
+.btn:hover::before{transform:translateY(0)}
+.btn span,.btn svg{position:relative;z-index:1;color:inherit}
+.btn--peq{font-weight:500;letter-spacing:.03em}
+.btn--linha{--bg:transparent;--fg:var(--grafite);border-color:rgba(46,54,62,.26)}
+.btn--linha:hover{color:#fff}
+.btn--peq{padding:11px 20px;font-size:14px}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;padding:150px 0 70px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;z-index:0;width:min(140vw,1250px);aspect-ratio:1;
+  right:-26%;top:-30%;
+  background:radial-gradient(circle at 50% 50%,rgba(231,148,164,.4),rgba(231,148,164,0) 62%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,6vw,76px);align-items:center}
+@media(max-width:940px){.hero .wrap{grid-template-columns:1fr}.hero{min-height:auto;padding-top:118px}}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--tinta-suave);margin-bottom:26px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--rosa)}
+
+h1{font-size:clamp(44px,8vw,86px);font-weight:300}
+h1 em{font-style:italic;color:var(--rosa-forte);font-weight:400}
+.hero-sub{max-width:44ch;margin-top:26px;font-size:clamp(17px,2.1vw,19.5px);color:var(--tinta-suave)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:42px;padding-top:26px;border-top:1px solid rgba(46,54,62,.13)}
+.pills span{font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--grafite-mid);border:1px solid rgba(46,54,62,.18);border-radius:999px;padding:6px 15px}
+
+/* Retrato do hero */
+.retrato{position:relative;margin:0}
+.retrato img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;object-position:64% 22%;
+  border-radius:250px 250px 8px 8px;box-shadow:var(--sombra);
+}
+.selo{
+  position:absolute;left:-16px;bottom:34px;
+  background:var(--grafite);color:#fff;
+  font-family:var(--display);font-style:italic;font-size:16px;letter-spacing:.01em;
+  padding:10px 22px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(46,54,62,.8);
+  white-space:nowrap;
+}
+@media(max-width:420px){.selo{font-size:14px;padding:9px 18px;left:-8px}}
+@media(max-width:940px){.retrato{max-width:390px;margin-inline:auto;order:-1}}
+
+/* Entrada escalonada */
+.an{opacity:0;transform:translateY(26px);animation:sobe 1.1s var(--ease) forwards}
+.an-1{animation-delay:.05s}.an-2{animation-delay:.16s}.an-3{animation-delay:.27s}
+.an-4{animation-delay:.38s}.an-5{animation-delay:.5s}
+@keyframes sobe{to{opacity:1;transform:none}}
+
+/* ============================================================
+   FAIXA DE CREDIBILIDADE
+   ============================================================ */
+.faixa{background:var(--grafite);color:#fff;padding:26px 0;position:relative;z-index:2}
+.faixa .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;text-align:center}
+.faixa p{font-size:12.5px;letter-spacing:.17em;text-transform:uppercase;opacity:.92}
+.faixa b{font-weight:500;color:var(--rosa)}
+
+/* ============================================================
+   SECOES
+   ============================================================ */
+section{padding:clamp(72px,11vw,130px) 0}
+.cabecalho{max-width:640px;margin-bottom:clamp(40px,6vw,64px)}
+.cabecalho h2{font-size:clamp(32px,5.2vw,52px);font-weight:300}
+.cabecalho h2 em{font-style:italic;color:var(--rosa-forte)}
+.cabecalho p{margin-top:18px;color:var(--tinta-suave);max-width:52ch}
+
+/* Tratamentos */
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:1px;background:rgba(46,54,62,.13);border:1px solid rgba(46,54,62,.13)}
+.card{background:var(--fundo);padding:clamp(28px,3.6vw,40px);display:flex;flex-direction:column;gap:14px;transition:background .45s var(--ease),color .45s var(--ease)}
+.card:hover{background:var(--grafite);color:#fff}
+.card:hover p{color:rgba(255,255,255,.78)}
+.card:hover .card-num{color:var(--rosa)}
+.card:hover .card-link{color:var(--rosa);border-color:rgba(231,148,164,.55)}
+.card-num{font-family:var(--display);font-size:13px;letter-spacing:.2em;color:var(--rosa-forte);transition:color .45s}
+.card h3{font-size:clamp(22px,2.7vw,27px);font-weight:400}
+.card p{color:var(--tinta-suave);font-size:15.5px;transition:color .45s}
+.card-link{
+  margin-top:auto;padding-top:18px;align-self:flex-start;
+  font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  color:var(--grafite);border-bottom:1px solid rgba(46,54,62,.3);
+  transition:color .45s,border-color .45s,gap .3s;display:inline-flex;align-items:center;gap:8px;
+}
+.card-link:hover{gap:14px}
+
+/* Sobre */
+.sobre{background:var(--fundo-alt)}
+.sobre .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(34px,6vw,80px);align-items:center}
+@media(max-width:900px){.sobre .wrap{grid-template-columns:1fr}}
+.sobre-foto{margin:0;position:relative}
+.sobre-foto img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);box-shadow:var(--sombra)}
+.sobre-foto figcaption{margin-top:14px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave)}
+.sobre h2{font-size:clamp(30px,4.6vw,46px);font-weight:300}
+.sobre h2 em{font-style:italic;color:var(--rosa-forte)}
+.sobre p{margin-top:20px;color:var(--tinta-suave)}
+.assinatura{margin-top:30px;padding-top:22px;border-top:1px solid rgba(46,54,62,.15);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--grafite)}
+
+/* Passos */
+.passos{background:var(--grafite);color:#fff}
+.passos .cabecalho h2{color:#fff}
+.passos .cabecalho h2 em{color:var(--rosa)}
+.passos .cabecalho p{color:rgba(255,255,255,.76)}
+.trilha{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(26px,4vw,52px)}
+.passo{position:relative;padding-top:30px;border-top:1px solid rgba(231,148,164,.4)}
+.passo b{position:absolute;top:-13px;left:0;background:var(--grafite);padding-right:14px;font-family:var(--display);font-size:13px;letter-spacing:.2em;color:var(--rosa);font-weight:400}
+.passo h3{font-size:23px;font-weight:400;color:#fff}
+.passo p{margin-top:10px;color:rgba(255,255,255,.76);font-size:15.5px}
+
+/* FAQ */
+.faq{max-width:830px}
+details{border-bottom:1px solid rgba(46,54,62,.15)}
+summary{cursor:pointer;list-style:none;padding:24px 44px 24px 0;position:relative;font-family:var(--display);font-size:clamp(18px,2.4vw,22px);font-weight:400}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"";position:absolute;right:6px;top:50%;width:13px;height:13px;
+  border-right:1.5px solid var(--rosa-forte);border-bottom:1.5px solid var(--rosa-forte);
+  transform:translateY(-70%) rotate(45deg);transition:transform .4s var(--ease);
+}
+details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+details p{padding:0 44px 26px 0;color:var(--tinta-suave);font-size:16px}
+
+/* Contato */
+.contato{background:var(--fundo-alt)}
+.contato .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,70px);align-items:start}
+@media(max-width:860px){.contato .wrap{grid-template-columns:1fr}}
+.info{display:grid;gap:26px;margin-top:8px}
+.info div span{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rosa-forte);margin-bottom:6px}
+.info div p{font-size:17px}
+.info a{text-decoration:none;border-bottom:1px solid rgba(46,54,62,.3)}
+
+/* Tabela de horários */
+.horarios{width:100%;border-collapse:collapse;margin-top:6px;font-size:15.5px}
+.horarios th{text-align:left;font-weight:400;color:var(--tinta-suave);padding:9px 0;border-bottom:1px solid rgba(46,54,62,.12)}
+.horarios td{text-align:right;padding:9px 0;border-bottom:1px solid rgba(46,54,62,.12);font-variant-numeric:tabular-nums}
+.horarios tr:last-child th,.horarios tr:last-child td{border-bottom:0}
+.horarios .hoje th,.horarios .hoje td{color:var(--rosa-forte);font-weight:500}
+.horarios .hoje th::after{content:" · hoje";font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.horarios .fechado td{color:var(--tinta-suave);opacity:.7}
+
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:var(--r);box-shadow:var(--sombra);background:#E7DAD9;margin-top:26px}
+
+/* Rodape */
+footer{background:var(--grafite);color:rgba(255,255,255,.75);padding:64px 0 96px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px}
+footer strong{display:block;font-family:var(--display);font-size:21px;color:#fff;font-weight:400;margin-bottom:8px}
+footer a{color:var(--rosa);text-decoration:none}
+.legal{max-width:46ch;font-size:12.5px;line-height:1.6;opacity:.78}
+
+/* WhatsApp flutuante */
+.zap{
+  position:fixed;right:20px;bottom:20px;z-index:60;
+  display:inline-flex;align-items:center;gap:10px;
+  background:#128C4A;color:#fff;text-decoration:none;
+  padding:15px 22px;border-radius:999px;font-size:15px;font-weight:500;
+  box-shadow:0 16px 34px -14px rgba(0,0,0,.5);
+  opacity:0;transform:translateY(22px) scale(.94);pointer-events:none;
+  transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.zap.mostra{opacity:1;transform:none;pointer-events:auto}
+.zap.mostra:hover{transform:translateY(-3px)}
+@media(max-width:560px){.zap span{display:none}.zap{padding:16px;right:16px;bottom:16px}}
+</style>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <a href="#inicio" aria-label="Dra. Jessica Moreira — início">
+    <img class="logo" src="assets/logo.png" alt="Consultório Odontológico Dra. Jessica Moreira — Cirurgiã-Dentista" width="900" height="317">
+  </a>
+  <nav class="topo-nav">
+    <a href="#tratamentos">Tratamentos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn--peq" data-zap="Olá, Dra. Jessica! Gostaria de agendar uma avaliação." href="#"><span>Agendar</span></a>
+  </nav>
+</header>
+
+<main id="inicio">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow an an-1">Jacaraípe · Serra — ES</p>
+        <h1 class="an an-2">Um sorriso que<br><em>funciona</em> e<br>te representa.</h1>
+        <p class="hero-sub an an-3">
+          Odontologia com diagnóstico cuidadoso e plano de tratamento explicado passo a passo —
+          de uma dor que precisa resolver hoje à reabilitação completa do seu sorriso.
+        </p>
+        <div class="hero-ctas an an-4">
+          <a class="btn" data-zap="Olá, Dra. Jessica! Gostaria de agendar uma avaliação." href="#">
+            <span>Agendar pelo WhatsApp</span>
+          </a>
+          <a class="btn btn--linha" href="#tratamentos"><span>Ver tratamentos</span></a>
+        </div>
+        <div class="pills an an-5">
+          <span>Cirurgia</span><span>Estética Dental</span><span>Próteses</span>
+          <span>Implantes</span><span>Dor</span>
+        </div>
+      </div>
+
+      <figure class="retrato an an-3">
+        <img src="assets/dra-jessica.jpg" alt="Dra. Jessica Moreira no consultório, com uma paciente criança no colo" width="1100" height="1017" fetchpriority="high">
+        <figcaption class="selo">Dra. Jessica Moreira</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== CREDIBILIDADE ===================== -->
+  <div class="faixa">
+    <div class="wrap">
+      <p>Responsável Técnica · <b>Dra. Jessica Moreira</b></p>
+      <p>CRO <b>8271 ES</b></p>
+      <p>EPAO <b>2513</b></p>
+      <p>Atendemos <b>aos domingos</b></p>
+    </div>
+  </div>
+
+  <!-- ===================== TRATAMENTOS ===================== -->
+  <section id="tratamentos">
+    <div class="wrap">
+      <div class="cabecalho rv">
+        <h2>Áreas de <em>atuação</em></h2>
+        <p>Cada caso começa por uma avaliação clínica. A partir dela, você recebe as opções possíveis,
+           o que cada uma envolve e o tempo de tratamento — sem pressa e sem termo técnico que ninguém entende.</p>
+      </div>
+
+      <div class="grade">
+        <article class="card rv">
+          <p class="card-num">01</p>
+          <h3>Cirurgia</h3>
+          <p>Extrações, sisos inclusos e procedimentos cirúrgicos realizados com planejamento prévio e orientação completa de pós-operatório.</p>
+          <a class="card-link" data-zap="Olá, Dra. Jessica! Gostaria de saber sobre cirurgia." href="#">Falar sobre isso →</a>
+        </article>
+
+        <article class="card rv">
+          <p class="card-num">02</p>
+          <h3>Estética Dental</h3>
+          <p>Clareamento, restaurações e facetas para harmonizar cor, forma e proporção — respeitando o que é natural no seu rosto.</p>
+          <a class="card-link" data-zap="Olá, Dra. Jessica! Gostaria de saber sobre estética dental." href="#">Falar sobre isso →</a>
+        </article>
+
+        <article class="card rv">
+          <p class="card-num">03</p>
+          <h3>Próteses</h3>
+          <p>Próteses fixas e removíveis para devolver mastigação, fala e conforto, com ajuste fino até que você esqueça que está usando.</p>
+          <a class="card-link" data-zap="Olá, Dra. Jessica! Gostaria de saber sobre próteses." href="#">Falar sobre isso →</a>
+        </article>
+
+        <article class="card rv">
+          <p class="card-num">04</p>
+          <h3>Implantes</h3>
+          <p>Reposição de dentes perdidos com planejamento por imagem, avaliação óssea e acompanhamento em todas as fases.</p>
+          <a class="card-link" data-zap="Olá, Dra. Jessica! Gostaria de saber sobre implantes." href="#">Falar sobre isso →</a>
+        </article>
+
+        <article class="card rv">
+          <p class="card-num">05</p>
+          <h3>Dor</h3>
+          <p>Investigação e manejo de dor de dente, sensibilidade e desconforto na articulação da mandíbula (DTM) — tratando a causa, não só o sintoma.</p>
+          <a class="card-link" data-zap="Olá, Dra. Jessica! Estou com dor e gostaria de atendimento." href="#">Falar sobre isso →</a>
+        </article>
+
+        <article class="card rv" style="justify-content:center">
+          <h3 style="font-style:italic">Não sabe por onde começar?</h3>
+          <p>Descreva o que está sentindo. A avaliação existe justamente para definir o caminho junto com você.</p>
+          <a class="card-link" data-zap="Olá, Dra. Jessica! Não sei bem o que preciso, gostaria de uma avaliação." href="#">Me avaliar →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="sobre" id="sobre">
+    <div class="wrap">
+      <figure class="sobre-foto rv">
+        <img src="assets/consultorio.jpg" alt="Sala de atendimento do consultório da Dra. Jessica Moreira, em Jacaraípe" width="1200" height="1173" loading="lazy">
+        <figcaption>Consultório · Av. Minas Gerais, 1026 — Jacaraípe</figcaption>
+      </figure>
+      <div class="rv">
+        <h2>Atendimento <em>próximo</em>, decisão consciente.</h2>
+        <p>
+          Sou a Dra. Jessica Moreira, cirurgiã-dentista e responsável técnica deste consultório,
+          em Jacaraípe. Atuo em cirurgia, estética dental, próteses, implantes e no tratamento da dor.
+        </p>
+        <p><!-- EDITAR: formação, especializações e tempo de atuação -->
+          Ninguém deveria sair do consultório sem entender o que foi feito e por quê.
+          Por isso cada plano de tratamento é apresentado com alternativas, etapas e prazos claros,
+          para que a decisão seja realmente sua — de uma consulta da criança à reabilitação completa
+          de quem já perdeu dentes.
+        </p>
+        <p class="assinatura">Dra. Jessica Moreira · CRO 8271 ES · EPAO-2513</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PASSOS ===================== -->
+  <section class="passos">
+    <div class="wrap">
+      <div class="cabecalho rv">
+        <h2>Como <em>funciona</em></h2>
+        <p>Do primeiro contato ao início do tratamento, em três etapas.</p>
+      </div>
+      <div class="trilha">
+        <div class="passo rv"><b>01</b><h3>Você manda mensagem</h3><p>Conta o que está sentindo ou o que gostaria de mudar. A partir disso combinamos o melhor horário.</p></div>
+        <div class="passo rv"><b>02</b><h3>Avaliação clínica</h3><p>Exame completo e, quando necessário, exames de imagem para entender a situação real de cada dente.</p></div>
+        <div class="passo rv"><b>03</b><h3>Plano de tratamento</h3><p>Você recebe as opções, o que cada uma envolve e as condições. Só começamos quando estiver claro para você.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section>
+    <div class="wrap">
+      <div class="cabecalho rv">
+        <h2>Perguntas <em>frequentes</em></h2>
+      </div>
+      <div class="faq rv">
+        <details><summary>Estou com dor. Consigo ser atendido com urgência?</summary>
+          <p>Casos de dor têm prioridade na agenda. Mande uma mensagem descrevendo o que está sentindo e desde quando, que retornamos com o horário disponível mais próximo.</p></details>
+        <details><summary>Vocês atendem no domingo mesmo?</summary>
+          <p>Sim. Domingo o consultório funciona das 09h às 18h — uma alternativa para quem não consegue faltar ao trabalho durante a semana. O único dia fechado é o sábado.</p></details>
+        <details><summary>Como é a primeira consulta?</summary>
+          <p>É uma avaliação: conversamos sobre seu histórico, examinamos sua boca e, se necessário, solicitamos exames de imagem. Ao final você entende o que precisa ser feito e quais são as opções.</p></details>
+        <details><summary>Atende convênio?</summary>
+          <p><!-- EDITAR: convênios aceitos -->Informe pelo WhatsApp qual é o seu convênio que confirmamos as condições de atendimento.</p></details>
+        <details><summary>Quais as formas de pagamento?</summary>
+          <p><!-- EDITAR: formas de pagamento e parcelamento -->As condições são apresentadas junto com o plano de tratamento, de acordo com o procedimento indicado.</p></details>
+        <details><summary>Quanto tempo leva um implante ou uma prótese?</summary>
+          <p>Depende da condição óssea, da saúde da gengiva e do número de dentes envolvidos. O prazo estimado é definido na avaliação, após os exames.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="contato" id="contato">
+    <div class="wrap">
+      <div class="rv">
+        <div class="cabecalho" style="margin-bottom:26px">
+          <h2>Vamos <em>conversar</em></h2>
+          <p>Agende sua avaliação pelo WhatsApp. É o caminho mais rápido para encontrar um horário.</p>
+        </div>
+        <div class="info">
+          <div>
+            <span>Endereço</span>
+            <p>Avenida Minas Gerais, 1026 — Jacaraípe<br>Serra — ES · CEP 29175-608</p>
+          </div>
+          <div>
+            <span>WhatsApp</span>
+            <p><a data-zap="Olá, Dra. Jessica! Gostaria de agendar uma avaliação." href="#">(27) 98191-9841</a></p>
+          </div>
+          <div>
+            <span>Instagram</span>
+            <p><a class="insta" href="https://instagram.com/drajessicamoreira" target="_blank" rel="noopener">@drajessicamoreira</a></p>
+          </div>
+        </div>
+        <p style="margin-top:34px"><a class="btn" data-zap="Olá, Dra. Jessica! Gostaria de agendar uma avaliação." href="#"><span>Agendar pelo WhatsApp</span></a></p>
+      </div>
+
+      <div class="rv">
+        <div class="info" style="margin-top:0">
+          <div>
+            <span>Horário de atendimento</span>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>09:00 — 18:00</td></tr>
+                <tr data-dia="1"><th scope="row">Segunda-feira</th><td>09:00 — 18:00</td></tr>
+                <tr data-dia="2"><th scope="row">Terça-feira</th><td>14:30 — 18:00</td></tr>
+                <tr data-dia="3"><th scope="row">Quarta-feira</th><td>14:30 — 18:00</td></tr>
+                <tr data-dia="4"><th scope="row">Quinta-feira</th><td>10:30 — 18:00</td></tr>
+                <tr data-dia="5"><th scope="row">Sexta-feira</th><td>10:30 — 18:00</td></tr>
+                <tr data-dia="6" class="fechado"><th scope="row">Sábado</th><td>Fechado</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <iframe class="mapa" title="Mapa — Avenida Minas Gerais, 1026, Jacaraípe, Serra ES" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Avenida+Minas+Gerais,+1026,+Jacara%C3%ADpe,+Serra+-+ES,+29175-608&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Dra. Jessica Moreira</strong>
+      Responsável Técnica · CRO 8271 ES | EPAO-2513<br>
+      Av. Minas Gerais, 1026 — Jacaraípe, Serra/ES
+    </div>
+    <div>
+      <a data-zap="Olá, Dra. Jessica! Gostaria de agendar uma avaliação." href="#">(27) 98191-9841</a> ·
+      <a class="insta" href="https://instagram.com/drajessicamoreira" target="_blank" rel="noopener">@drajessicamoreira</a>
+      <p class="legal" style="margin-top:14px">
+        Este site tem caráter informativo e não substitui a consulta odontológica.
+        Resultados variam conforme cada caso clínico.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a class="zap" id="zapFlut" href="#" aria-label="Agendar pelo WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5 0-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2"/></svg>
+  <span>Agendar</span>
+</a>
+
+<!-- SEO local -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Dentist",
+  "name":"Consultório Odontológico Dra. Jessica Moreira",
+  "description":"Cirurgiã-dentista responsável técnica, CRO 8271 ES | EPAO-2513. Cirurgia, estética dental, próteses, implantes e tratamento de dor em Jacaraípe, Serra/ES.",
+  "image":"assets/og.jpg",
+  "logo":"assets/logo.png",
+  "telephone":"+5527981919841",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Avenida Minas Gerais, 1026",
+    "addressLocality":"Serra",
+    "addressRegion":"ES",
+    "postalCode":"29175-608",
+    "addressCountry":"BR"
+  },
+  "areaServed":"Serra, Espírito Santo",
+  "sameAs":["https://instagram.com/drajessicamoreira"],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday"],"opens":"09:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday"],"opens":"14:30","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday"],"opens":"10:30","closes":"18:00"}
+  ],
+  "medicalSpecialty":["Oral Surgery","Cosmetic Dentistry","Prosthodontics","Dental Implants","Orofacial Pain"]
+}
+</script>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO
+   ============================================================ */
+const CONFIG = {
+  whatsapp: "5527981919841",
+  instagram: "drajessicamoreira"
+};
+
+const zapLink = texto =>
+  "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(texto);
+
+/* Monta todos os links de WhatsApp com a mensagem de cada seção */
+document.querySelectorAll("[data-zap]").forEach(el => {
+  el.href = zapLink(el.dataset.zap);
+  el.target = "_blank";
+  el.rel = "noopener";
+});
+
+const flut = document.getElementById("zapFlut");
+flut.href = zapLink("Olá, Dra. Jessica! Gostaria de agendar uma avaliação.");
+flut.target = "_blank";
+flut.rel = "noopener";
+
+/* Instagram */
+document.querySelectorAll("a.insta").forEach(a => {
+  a.href = "https://instagram.com/" + CONFIG.instagram;
+});
+
+/* Destaca o dia de hoje na tabela de horários */
+const hoje = document.querySelector('.horarios tr[data-dia="' + new Date().getDay() + '"]');
+if (hoje) hoje.classList.add("hoje");
+
+/* Header encolhe + botão flutuante aparece */
+const topo = document.getElementById("topo");
+addEventListener("scroll", () => {
+  const y = scrollY;
+  topo.classList.toggle("encolhe", y > 40);
+  flut.classList.toggle("mostra", y > 520);
+}, { passive: true });
+
+/* Reveal no scroll */
+const obs = new IntersectionObserver(entradas => {
+  entradas.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("is-in"); obs.unobserve(e.target); }
+  });
+}, { threshold: .14, rootMargin: "0px 0px -8% 0px" });
+
+document.querySelectorAll(".rv").forEach((el, i) => {
+  el.style.transitionDelay = (i % 3) * 90 + "ms";
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
